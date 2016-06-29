@@ -4,6 +4,7 @@ import Chart from '../components/chart';
 
 class WeatherList extends Component {
   renderWeather(cityData) {
+
     const name = cityData.city.name
     const temps = cityData.list.map(weather => (weather.main.temp * (9/5) - 459.67)) //array of temperatures (in kelvin)
     const pressures = cityData.list.map(weather => weather.main.pressure)
@@ -33,7 +34,7 @@ class WeatherList extends Component {
       <table className="table table-hover">
         <thead>
           <tr>
-            <th>City:</th>
+            <th>Zip Code:</th>
             <th>Temperature (F):</th>
             <th>Pressure (hPa):</th>
             <th>Humidity (%):</th>
